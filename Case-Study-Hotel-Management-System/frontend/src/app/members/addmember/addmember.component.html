@@ -1,0 +1,82 @@
+
+<!--Add members-->
+
+
+<div class="wrapper">
+  <h2>ADD MEMBER</h2>
+
+<div class="container py-3">
+  <div class="col-md-4 mb-3 mx-auto">
+      <div class="card">
+          <div class="card-body">
+            <form class="form">
+              <div class="form-group ">
+                <label for="name">Name</label>
+                <input type="text" #name=ngModel class="form-control col-xs-4" [(ngModel)]="addMembersData.name" name="name" placeholder="Enter name" required>
+                <small [class.d-none] = "name.untouched || name.valid" class="text-danger">Name is required</small>
+              </div>
+      
+              <div class="form-group ">
+                  <label>Gender:</label>
+                    <div class="wrap">
+                      <input type="radio" id="male" name="gender" value="Male" [(ngModel)]="addMembersData.gender" >
+                      <span>Male</span>
+                    </div>
+                    <div class="wrap">
+                      <input type="radio" id="female" name="gender" value="Female"  [(ngModel)]="addMembersData.gender">
+                      <span>Female</span>
+                    </div>
+                    <div class="wrap">
+                      <input type="radio" id="other" name="gender" value="Other" [(ngModel)]="addMembersData.gender">
+                      <span>Others</span>
+                    </div>
+              </div>
+      
+              <div class="form-group ">
+                  <label for="contact">Contact</label>
+                  <input type="tel" pattern="[0-9]{10}" #contact=ngModel class="form-control col-xs-4" [(ngModel)]="addMembersData.contact" name="contact" placeholder="Enter contact" required>
+                  <small [class.d-none] = "contact.untouched || contact.valid" class="text-danger">Contact is required and should be a 10 digit number</small>
+              </div> 
+
+              <div class="form-group ">
+                <label for="email">Email</label>
+                <input type="email" #email=ngModel class="form-control col-xs-4" [(ngModel)]="addMembersData.email" name="email" placeholder="Enter email" required>
+                <small [class.d-none] = "email.untouched || email.valid" class="text-danger">Email is required</small>
+            </div>
+    
+            <br>
+    
+            <button type="button" class="btn" (click) = "addMembers()" data-toggle="modal" data-target="#Modal1" [disabled]="email.invalid || contact.invalid || name.invalid ">Add</button>
+            <button type="button" class="btn ml-5" (click)="goBack()">Back</button>
+           </form>
+
+              
+          </div>
+      </div>
+  </div>
+</div>
+<br><br><br>
+
+<app-footer-dark></app-footer-dark>
+</div>
+
+
+<!--modal for add-->
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel"> Add </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {{response}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,61 @@
+
+
+#image{
+    background-image: url('../../assets/signup1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    height: 98%;
+    width: 60%;
+    left: 0;
+    opacity: 1;
+    font-size: 1.5em;
+}
+.zoom:hover {
+    transform: scale(1.1); 
+  }
+h2{
+    text-transform: uppercase;
+}
+.card-title{
+    color: darkblue;
+}
+.card{
+    position: fixed;
+    position: fixed;
+    height: 100%;
+    width: 40%;
+    right: 0;
+    background-color: whitesmoke;
+    opacity: 0.9;
+    padding: 1.5rem 2rem;
+    color: #333333;
+}
+input, select{
+    background: transparent;
+    border-radius: 20px;
+    border-width: 3px;
+    border-color: rgb(34, 34, 151);
+    width: 300px;
+    margin: 10px auto;
+    height: 45px;
+}
+label{
+    font-size: 1.2em;
+}
+.btn{
+    background-color:transparent;
+    border: 2px solid ;
+    border-radius: 30px;
+    color: darkblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover{
+    color: whitesmoke;
+    background-color: darkblue;
+}
+.wrapper{
+    background-color: #333333;
+}

@@ -1,0 +1,51 @@
+<div class="wrapper">
+<app-navbar></app-navbar>
+
+<div class="row">
+  <div class="text-center" id = "image">
+    <div class="zoom">
+      <h2 class=" display-4 py-5">Add users</h2>
+      <p>Add users to help manage the hotel</p>
+    </div>
+  </div>
+
+<div class="card rounded-0 text-center">
+  <div class="card-title zoom">
+    <h3 class="text-center display-4 py-3">Add User</h3>
+  </div>
+  <div class="card-body">
+    <form class="form">
+      <div class="form-group ">
+        <label for="userId">UserId</label>
+        <input type="text" #userId=ngModel class="form-control col-xs-4" [(ngModel)]="registerUserData.userId" name="userId" placeholder="Enter user ID" required>
+        <small [class.d-none] = "userId.untouched || userId.valid" class="text-danger">UserId is required</small>
+      </div>
+      <div class="form-group">
+        <label>Role</label>
+        <br>
+        <select name="role" #role=ngModel [(ngModel)]="registerUserData.role"  required> 
+          <option value="Owner">Owner</option>
+          <option value="Manager">Manager</option>
+          <option value="Receptionist">Receptionist</option>
+        </select>
+       
+        <div>
+          <small [class.d-none] = "role.untouched || role.valid" class="text-danger">Role is required</small>
+        </div>   
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" #password=ngModel class="form-control col-xs-4"  [(ngModel)]="registerUserData.password" name="password" placeholder="Enter password" required>
+        <small [class.d-none] = "password.untouched || password.valid" class="text-danger">Password is required</small>
+      </div>
+      <div>
+        <button type="button" class="btn" (click) = "registerUser()" [disabled]='password.invalid || role.invalid || userId.invalid'>Add User</button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+</div>
+</div>
+
+

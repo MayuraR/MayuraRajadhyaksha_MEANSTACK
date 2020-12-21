@@ -1,0 +1,88 @@
+@import '~font-awesome/css/font-awesome.css';
+
+.page-container{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.navbar,.container{
+    justify-content: space-between;
+    color: #333333;
+}
+
+ul{
+    display: flex;
+    width: auto;
+    margin-top: 0;
+    list-style-type: none;
+    font-size: 1.5em;
+}
+  
+li{
+    padding: 10px 10px;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    color: whitesmoke;
+}
+a:hover{
+    cursor: pointer;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+.membership{
+    background-color:#333333;
+    border: 2px solid whitesmoke;
+    border-radius: 30px;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    margin: auto auto;
+}
+.membership:hover{
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+}
+
+
+.card{
+    color: #333333;
+    background-color: whitesmoke;
+    border: transparent;
+}
+h2{
+    color: #333333;
+    text-align: center;
+}
+.wrapper{
+    padding-top: 5%;
+}
+button{
+    background-color:transparent;
+    border: 2px solid #26af5f;
+    border-radius: 30px;
+    color: #2ecc71;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 5%;
+}
+input{
+    background: transparent;
+    border-width: 2px;
+    border-color: gray;
+    width: 350px;
+}
+.btn1{
+    margin-right: 30%;
+}
+label{
+    font-weight: 600;
+}
+.form-group a{
+    color: black;
+    text-decoration: none;
+}

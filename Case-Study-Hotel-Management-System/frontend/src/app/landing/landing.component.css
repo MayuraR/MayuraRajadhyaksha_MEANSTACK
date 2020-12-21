@@ -1,0 +1,64 @@
+.text{
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+.name{
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    font-family: 'Dancing Script', cursive;
+}
+p{
+    text-transform: uppercase;
+}
+.btn{
+    background-color:transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 30px;
+    color: whitesmoke;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: auto auto;
+}
+.btn:hover{
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+}
+app-footer-white{
+    position:fixed;
+    bottom: 0%;
+}
+.image{
+    
+    min-width: 100%;
+    min-height: 100vh;
+    background-image: url("../../assets/corridor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: image 12s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes image{
+    0% {
+        background-image: url("../../assets/corridor.jpg");
+    }
+    25% {
+        background-image: url("../../assets/bedroom.jpg");
+    }
+    50% {
+        background-image: url("../../assets/lobby.jpg");
+    }
+    75% {
+        background-image: url("../../assets/pool.jpg");
+    }
+    100% {
+        background-image: url("../../assets/corridor.jpg");
+    }
+}
+
+
